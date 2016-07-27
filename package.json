@@ -1,0 +1,25 @@
+{
+  "name": "nflbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twobitint/nflbot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/twobitint/nflbot/issues"
+  },
+  "homepage": "https://github.com/twobitint/nflbot#readme",
+  "dependencies": {
+    "botkit": "^0.2.2",
+    "dotenv": "^2.0.0",
+    "pg": "^6.0.3",
+    "prettyjson": "^1.1.3"
+  }
+}
