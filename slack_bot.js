@@ -53,7 +53,18 @@ var bot = controller.spawn({
 
 var connectionString = process.env.DATABASE_URL || 'postgres://localhost:5432/nfldb';
 var client = new pg.Client(connectionString);
-client.connect();
+client.connect(function (err) {
+    if (err) throw err;
+    client.query('select * from player limit 1', function (err, result) {
+        if (err) throw err;
+        console.log(prettyjson.render(result));
+        client.end(function (err) {
+            if (err) throw err;
+        });
+    });
+});
+
+
 
 
 // Run a simple web server for slack commands
