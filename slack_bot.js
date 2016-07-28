@@ -64,6 +64,10 @@ client.connect(function (err) {
     });
 });
 
+function playerStats(name, year) {
+
+}
+
 //Run a simple web server for slack commands
 controller.setupWebserver(process.env.SERVER_PORT, function (err, webserver) {
     controller.createWebhookEndpoints(controller.webserver);
